@@ -23,7 +23,7 @@ calibration_window = 260
 # the test dataset is built using the years_test parameter. They should either be one of
 # the date formats existing in python or a string with the following format
 # "%d/%m/%Y %H:%M"
-begin_test_date = "1/06/2023 00:00"
+begin_test_date = "1/03/2023 00:00"
 end_test_date = "7/06/2023 00:00"
 
 path_datasets_folder = os.path.join('.', 'datasets')
