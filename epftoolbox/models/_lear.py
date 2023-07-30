@@ -173,6 +173,8 @@ class LEAR(object):
         # Price lags: D-1, D-2, D-3, D-7
         # Exogeneous inputs lags: D, D-1, D-7
         n_features = 96 + 7 + n_exogenous_inputs * 72
+        n_features = 96 + 7 + n_exogenous_inputs * 72
+        print('Number of features: {}'.format(n_features))
 
 
         # Extracting the predicted dates for testing and training. We leave the first week of data
@@ -387,6 +389,12 @@ def evaluate_lear_in_test_dataset(path_datasets_folder=os.path.join('.', 'datase
     # Defining train and testing data
     df_train, df_test = read_data(dataset=dataset, years_test=years_test, path=path_datasets_folder,
                                   begin_test_date=begin_test_date, end_test_date=end_test_date)
+    
+    # print the length of the training and testing datasets
+    print('Training dataset: {} - {} ({} days)'.format(str(df_train.index[0])[:10],
+                                                         str(df_train.index[-1])[:10],
+                                                            (df_train.index[-1] - df_train.index[0]).days))
+    
 
     # Defining unique name to save the forecast
     forecast_file_name = 'LEAR_forecast' + '_dat' + str(dataset) + '_YT' + str(years_test) + \

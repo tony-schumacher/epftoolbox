@@ -7,7 +7,7 @@ import pandas as pd
 # Download available forecast of the NP market available in the library repository
 # These forecasts accompany the original paper
 forecasts = pd.read_csv('https://raw.githubusercontent.com/jeslago/epftoolbox/master/' + 
-                      'forecasts/Forecasts_NP_DNN_LEAR_ensembles.csv', index_col=0)
+                      'forecasts/Forecasts_DE_DNN_LEAR_ensembles.csv', index_col=0)
 
 # Deleting the real price field as it the actual real price and not a forecast
 del forecasts['Real price']
@@ -16,7 +16,7 @@ del forecasts['Real price']
 forecasts.index = pd.to_datetime(forecasts.index)
 
 # Extracting the real prices from the market
-_, df_test = read_data(path='.', dataset='NP', begin_test_date=forecasts.index[0], 
+_, df_test = read_data(path='.', dataset='DE', begin_test_date=forecasts.index[0], 
                        end_test_date=forecasts.index[-1])
 
 real_price = df_test.loc[:, ['Price']]
