@@ -17,14 +17,14 @@ dataset = 'DE'
 # years_test = 2
 
 # Number of days used in the training dataset for recalibration
-calibration_window = 364
+calibration_window = 260
 
 # Optional parameters for selecting the test dataset, if either of them is not provided, 
 # the test dataset is built using the years_test parameter. They should either be one of
 # the date formats existing in python or a string with the following format
 # "%d/%m/%Y %H:%M"
-begin_test_date = "10/06/2023 00:00"
-end_test_date = "16/06/2023 00:00"
+begin_test_date = "1/06/2023 00:00"
+end_test_date = "7/06/2023 00:00"
 
 path_datasets_folder = os.path.join('.', 'datasets')
 path_recalibration_folder = os.path.join('.', 'experimental_files')
