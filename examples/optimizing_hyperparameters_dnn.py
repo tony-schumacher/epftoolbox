@@ -14,7 +14,7 @@ nlayers = 2
 
 # Market under study. If it not one of the standard ones, the file name
 # has to be provided, where the file has to be a csv file
-dataset = 'NP'
+dataset = 'DE'
 
 # Number of years (a year is 364 days) in the test dataset.
 years_test = 2

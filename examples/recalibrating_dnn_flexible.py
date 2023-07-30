@@ -23,7 +23,7 @@ parser = argparse.ArgumentParser()
 
 parser.add_argument("--nlayers", help="Number of layers in DNN", type=int, default=2)
 
-parser.add_argument("--dataset", type=str, default='PJM', 
+parser.add_argument("--dataset", type=str, default='DE', 
                     help='Market under study. If it not one of the standard ones, the file name' +
                          'has to be provided, where the file has to be a csv file')
 
@@ -48,13 +48,13 @@ parser.add_argument("--calibration_window", type=int, default=4,
 parser.add_argument("--experiment_id", type=int, default=1, 
                     help='Unique identifier to read the trials file of hyperparameter optimization')
 
-parser.add_argument("--begin_test_date", type=str, default=None, 
+parser.add_argument("--begin_test_date", type=str, default="1/06/2023 00:00", 
                     help='Optional parameter to select the test dataset. Used in combination with ' +
                          'end_test_date. If either of them is not provided, test dataset is built ' +
                          'using the years_test parameter. It should either be  a string with the ' +
                          ' following format d/m/Y H:M')
 
-parser.add_argument("--end_test_date", type=str, default=None, 
+parser.add_argument("--end_test_date", type=str, default="7/06/2023 00:00", 
                     help='Optional parameter to select the test dataset. Used in combination with ' +
                          'begin_test_date. If either of them is not provided, test dataset is built ' +
                          'using the years_test parameter. It should either be  a string with the ' +
