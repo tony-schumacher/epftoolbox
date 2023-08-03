@@ -9,6 +9,16 @@ Example for optimizing the hyperparameter and features of the DNN model
 
 from epftoolbox.models import hyperparameter_optimizer
 
+print("Optimizing hyperparameters of the DNN model V1.0")
+
+from tensorflow.python.client import device_lib
+
+def get_available_gpus():
+    local_device_protos = device_lib.list_local_devices()
+    return [x.name for x in local_device_protos if x.device_type == 'GPU']
+
+print("GPUs available: ", get_available_gpus())
+
 # Number of layers in DNN
 nlayers = 2
 
